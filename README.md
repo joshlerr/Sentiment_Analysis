@@ -104,6 +104,9 @@ bing_word_counts %>%
   labs(x = "Contribution to sentiment",
        y = NULL)
 ```  
+![image](https://user-images.githubusercontent.com/118494139/222990310-37af4e17-24ec-4719-959c-2c1a9bf93e82.png)  
+
+
 
 
 
