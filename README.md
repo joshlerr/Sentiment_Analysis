@@ -74,7 +74,7 @@ ggplot(data=low_5,aes(Company,sum_sentiment))+
   ```
 ![image](https://user-images.githubusercontent.com/118494139/222989516-e418fbf3-330f-47cd-874e-c3772febffed.png)  
 
-from the graph above, we can see that companies like E
+from the graph above, we can see that companies like Equifax, Bank of America, Experian, TransUnion Intermediate Holdings, Inc. and Wells Fargo had the most negative sentiments and responds from customers. Equifax should really improve becuase they have got the most negative sentimemnts from customers. 
 
 
 
