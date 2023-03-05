@@ -36,3 +36,4 @@ Data_by_word<-filter(Data_by_word, word != "xx" )
 
 
 
+
