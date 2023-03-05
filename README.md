@@ -55,7 +55,11 @@ top_5<-df2[1:5,]
 
 # Visualization of top 5 companies with positive sentiments  
 ![image](https://user-images.githubusercontent.com/118494139/222989060-698d0345-f029-4fd1-937f-b2083ccd6c12.png)  
-as we can see above, customers(consumers) have responded positively to these companies. The Northern Trust company and Seure One Corporation have made a great job to have the highest positive sentiments according to the customres response.
+as we can see above, customers(consumers) have responded positively to these companies. The Northern Trust company and Seure One Corporation have made a great job to have the highest positive sentiments according to the customres response.  
+# Lowest 5 companies(highest negative values)  
+
+
+
 
 
 
