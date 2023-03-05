@@ -51,6 +51,7 @@ df <- clean_Data %>% group_by(Company) %>%
 df2<-df[order(df$sum_sentiment, decreasing = TRUE),]
 top_5<-df2[1:5,]
 ```
+![image](https://user-images.githubusercontent.com/118494139/222988873-0cf76738-9564-44a6-b405-1a788b2ec595.png)
 
 
 
