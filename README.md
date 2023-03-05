@@ -15,7 +15,23 @@ colnames(complaints_table)[1]<-"Date"
 colnames(complaints_table)[6]<-"Consumer_response"
 colnames(complaints_table)[15]<-"Company_response"
 colnames(complaints_table)[18]<-"Complaint_ID"
-```
+```  
+after that, we started breaking down the sentences under the consumer response column into individual words. this multiplied the dataset into millions which becomes hard to make a sentiment analysis. thus, we start using the stop_word function which cutts down unwanted words like "the", "is"..etc. then, we also cut of some words that are not important for our analysis.  
+'''r
+Data_by_word <- selected%>%
+  group_by(Company) %>%
+  mutate(linenumber = row_number())%>%
+  ungroup() %>%
+  unnest_tokens(word, Consumer_response)
+
+#removing unwanted words
+Data_by_word <- Data_by_word %>%
+  anti_join(stop_words)
+Data_by_word<-filter(Data_by_word, word != "xxxx" )
+Data_by_word<-filter(Data_by_word, word != "xx" )
+'''   
+
+
 
 
 
