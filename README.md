@@ -66,6 +66,7 @@ ggplot(data=top_5,aes(Company,sum_sentiment))+
 as we can see above, customers(consumers) have responded positively to these companies. The Northern Trust company and Seure One Corporation have made a great job to have the highest positive sentiments according to the customres response.  
 # Lowest 5 companies(highest negative values)  
 ```r
+low_5<-df2[2679:2683,]
 ggplot(data=low_5,aes(Company,sum_sentiment))+
   geom_histogram(stat="identity",aes(color=Company))+
   labs( title = "Top 5 companies with good sentiments",x="Company", y="Sentiment value")+
