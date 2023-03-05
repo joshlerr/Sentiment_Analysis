@@ -54,6 +54,9 @@ top_5<-df2[1:5,]
 ![image](https://user-images.githubusercontent.com/118494139/222988873-0cf76738-9564-44a6-b405-1a788b2ec595.png)  
 
 # Visualization of top 5 companies with positive sentiments  
+![image](https://user-images.githubusercontent.com/118494139/222989060-698d0345-f029-4fd1-937f-b2083ccd6c12.png)  
+
+
 
  
 
