@@ -106,6 +106,11 @@ bing_word_counts %>%
 ```  
 ![image](https://user-images.githubusercontent.com/118494139/222990310-37af4e17-24ec-4719-959c-2c1a9bf93e82.png)  
 
+# Word Cloud  
+last but not least, i created a word cloud from the dataset.  
+
+
+
 
 
 
