@@ -74,6 +74,8 @@ ggplot(data=low_5,aes(Company,sum_sentiment))+
   ```
 ![image](https://user-images.githubusercontent.com/118494139/222989516-e418fbf3-330f-47cd-874e-c3772febffed.png)  
 
+from the graph above, we can see that companies like E
+
 
 
 
