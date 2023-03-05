@@ -9,7 +9,14 @@ From the 18 columns present in the data, the ones we used for our sentiment anal
 2. consumer response  
 3. Issue  
 # Cleaning the data  
-Cleaning the data took most of the time during the analysis. The first thing that i did was renaming different columns into the names that we want so that it could be easier for us to read.
+Cleaning the data took most of the time during the analysis. The first thing that i did was renaming different columns into the names that we want so that it could be easier for us to read.  
+```r
+colnames(complaints_table)[1]<-"Date"
+colnames(complaints_table)[6]<-"Consumer_response"
+colnames(complaints_table)[15]<-"Company_response"
+colnames(complaints_table)[18]<-"Complaint_ID"
+```
+
 
 
 
