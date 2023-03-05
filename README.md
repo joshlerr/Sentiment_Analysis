@@ -8,6 +8,8 @@ From the 18 columns present in the data, the ones we used for our sentiment anal
 1. Company  
 2. consumer response  
 3. Issue  
-# Cleaning the data 
+# Cleaning the data  
+the first thing that we did was renaming different columns into the names that we want so that it could be easier for us to read.
+
 
 
