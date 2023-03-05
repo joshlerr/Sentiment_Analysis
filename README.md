@@ -108,7 +108,10 @@ bing_word_counts %>%
 
 # Word Cloud  
 last but not least, i created a word cloud from the dataset.  
-![image](https://user-images.githubusercontent.com/118494139/222990577-e5a72f85-78b3-4106-8b21-684c48e72708.png)
+![image](https://user-images.githubusercontent.com/118494139/222990577-e5a72f85-78b3-4106-8b21-684c48e72708.png)  
+
+# Shiny app compatible graph from above  
+
 
 
 
