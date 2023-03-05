@@ -74,7 +74,38 @@ ggplot(data=low_5,aes(Company,sum_sentiment))+
   ```
 ![image](https://user-images.githubusercontent.com/118494139/222989516-e418fbf3-330f-47cd-874e-c3772febffed.png)  
 
-from the graph above, we can see that companies like Equifax, Bank of America, Experian, TransUnion Intermediate Holdings, Inc. and Wells Fargo had the most negative sentiments and responds from customers. Equifax should really improve becuase they have got the most negative sentimemnts from customers. 
+from the graph above, we can see that companies like Equifax, Bank of America, Experian, TransUnion Intermediate Holdings, Inc. and Wells Fargo had the most negative sentiments and responds from customers. Equifax should really improve becuase they have got the most negative sentimemnts from customers.  
+
+# Words that had the most positive and negative sentiments  
+some words had very large negative sentiment value and other words had positive sentiment value. to compare the word values, we initially separate the words into positive and negative, then we put their ranks aside to them.  
+```r
+#counting sentiments in the dataset above, nrc and bing 
+get_sentiments("nrc") %>% 
+  filter(sentiment %in% c("positive", "negative")) %>% 
+  count(sentiment)
+
+get_sentiments("bing") %>% 
+  count(sentiment)
+bing_word_counts <- Data_by_word %>%
+  inner_join(get_sentiments("bing")) %>%
+  count(word, sentiment, sort = TRUE) %>%
+  ungroup()
+```  
+after that, it was easy for me to plot the graph of the words comparison  
+```r
+bing_word_counts %>%
+  group_by(sentiment) %>%
+  slice_max(n, n = 10) %>% 
+  ungroup() %>%
+  mutate(word = reorder(word, n)) %>%
+  ggplot(aes(n, word, fill = sentiment)) +
+  geom_col(show.legend = FALSE) +
+  facet_wrap(~sentiment, scales = "free_y") +
+  labs(x = "Contribution to sentiment",
+       y = NULL)
+```  
+
+
 
 
 
