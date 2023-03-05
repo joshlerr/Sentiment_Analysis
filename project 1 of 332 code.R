@@ -16,7 +16,7 @@ rm(list=ls())
 setwd("C:/data 332/archive")
 
 #Renaming different columns
-complaints_table<-readRDS("Consumer_Complaints.csv")
+complaints_table<-readRDS("Consumer_Complaints.rds")
 colnames(complaints_table)[1]<-"Date"
 colnames(complaints_table)[6]<-"Consumer_response"
 colnames(complaints_table)[15]<-"Company_response"
