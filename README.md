@@ -113,7 +113,8 @@ last but not least, i created a word cloud from the dataset.
 # Shiny app compatible graph from above  
 #ShinnyApp
 ```r
-column_names<-colnames(df2)
+new_data<-Data_by_word
+column_names<-colnames(Data_by_word)
 ui<-fluidPage( 
   
   titlePanel(title = "Top 5 companies with better and worse sentiments"),
@@ -127,20 +128,21 @@ ui<-fluidPage(
     ),
     column(4,plotOutput('plot_01')),
     column(6,DT::dataTableOutput("table_01", width = "100%"))
-
-server<-function(input,output){
+  )
+)
+    server<-function(input,output){
       
-  output$plot_01 <- renderPlot({
-    ggplot(dataset,aes_string(x=input$X,y=input$Y))+
-      geom_point()+
-      geom_smooth()
+      output$plot_01 <- renderPlot({
+        ggplot(Data_by_word,aes_string(x=input$X,y=input$Y))+
+          
+          geom_smooth()
         
-  })
+      })
       
-  output$table_01<-DT::renderDataTable(df2[,c(input$X,input$Y)],options = list(pageLength = 4))
-}
+      output$table_01<-DT::renderDataTable(Data_by_word[,c(input$X,input$Y,input$Splitby)],options = list(pageLength = 4))
+    }
     
-shinyApp(ui=ui, server=server)
+    shinyApp(ui=ui, server=server)
 ```
 
 
