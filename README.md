@@ -16,7 +16,7 @@ colnames(complaints_table)[6]<-"Consumer_response"
 colnames(complaints_table)[15]<-"Company_response"
 colnames(complaints_table)[18]<-"Complaint_ID"
 ```  
-2. After that, i started breaking down the sentences under the consumer response column into individual words. this multiplied the dataset into millions which becomes hard to make a sentiment analysis. thus, we start using the stop_word function which cutts down unwanted words like "the", "is"..etc. then, we also cut of some words that are not important for our analysis.  
+2. After that, i started breaking down the sentences under the consumer response column into individual words. this multiplied the dataset into millions which becomes hard to make a sentiment analysis. thus, we start using the stop_word function which cuts down unwanted words like "the", "is"..etc. then, we also cut of some words that are not important for our analysis.  
 ```r
 Data_by_word <- selected%>%
   group_by(Company) %>%
@@ -54,7 +54,7 @@ top_5<-df2[1:5,]
 ![image](https://user-images.githubusercontent.com/118494139/222988873-0cf76738-9564-44a6-b405-1a788b2ec595.png)  
 
 # Visualization of top 5 companies with positive sentiments  
-the ggplot we used is:  
+the ggplot i used is:  
 ```r
 ggplot(data=top_5,aes(Company,sum_sentiment))+
   geom_histogram(stat="identity",aes(color=Company))+
