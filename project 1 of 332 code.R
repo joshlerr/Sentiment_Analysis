@@ -120,8 +120,7 @@ bing_word_counts %>%
 
 #ShinnyApp
 
-new_data<-Data_by_word
-column_names<-colnames(Data_by_word)
+column_names<-colnames(clean_Data)
 ui<-fluidPage( 
   
   titlePanel(title = "Consumer complaints on Financial Companies"),
@@ -129,9 +128,9 @@ ui<-fluidPage(
   
   fluidRow(
     column(2,
-           selectInput('X', 'choose company',column_names,column_names[1]),
+           selectInput('X', 'choose x',column_names,column_names[4]),
            selectInput('Y', 'Choose Y',column_names,column_names[2]),
-           #selectInput('Splitby', 'Split By', column_names,column_names[3])
+           selectInput('Splitby', 'Split By', column_names,column_names[5])
     ),
     column(4,plotOutput('plot_01')),
     column(6,DT::dataTableOutput("table_01", width = "100%"))
@@ -140,18 +139,15 @@ ui<-fluidPage(
     server<-function(input,output){
       
       output$plot_01 <- renderPlot({
-        ggplot(Data_by_word,aes_string(x=input$X,y=input$Y))+
-          
+        ggplot(clean_Data,aes_string(x=input$X,y=input$Y))+
           geom_smooth()
         
       })
       
-      output$table_01<-DT::renderDataTable(Data_by_word[,c(input$X,input$Y,input$Splitby)],options = list(pageLength = 4))
+      output$table_01<-DT::renderDataTable(clean_Data[,c(input$X,input$Y,input$Splitby)],options = list(pageLength = 4))
     }
     
     shinyApp(ui=ui, server=server)
-    
-
 
 
 
