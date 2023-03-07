@@ -117,7 +117,7 @@ new_data<-Data_by_word
 column_names<-colnames(Data_by_word)
 ui<-fluidPage( 
   
-  titlePanel(title = "Top 5 companies with better and worse sentiments"),
+  titlePanel(title = "company and state performance"),
   
   
   fluidRow(
