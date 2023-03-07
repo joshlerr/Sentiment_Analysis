@@ -10,7 +10,7 @@ library(janeaustenr)
 library(dplyr)
 library(stringr)
 library(reshape2)
-
+library(shiny)
 rm(list=ls())
 
 setwd("C:/data 332/archive")
@@ -124,7 +124,7 @@ new_data<-Data_by_word
 column_names<-colnames(Data_by_word)
 ui<-fluidPage( 
   
-  titlePanel(title = "Top 5 companies with better and worse sentiments"),
+  titlePanel(title = "Consumer complaints on Financial Companies"),
   
   
   fluidRow(
