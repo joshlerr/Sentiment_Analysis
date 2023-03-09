@@ -151,6 +151,9 @@ ui<-fluidPage(
     shinyApp(ui=ui, server=server)
 ```
 
+# Conclussion  
+There is an overall of negative response and compliments from consumers towards companies and only companies like Coinbase, Northern Trust Company, and Secure one capital corporation had positive responses that outweighed the negtive one. on the other hand, a lot of companies have negative sentiments and should improve what they do. 
+
 
 
 
