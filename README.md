@@ -153,7 +153,7 @@ ui<-fluidPage(
 
 # Conclussion  
   There is an overall negative response and compliments from consumers towards companies and only companies like Coinbase, Northern Trust Company, and Secure one capital corporation had positive responses that outweighed the negtive one. on the other hand, a lot of companies have negative sentiments when we see the consumer response.  
-  The other thing that we can see from looking at our shiny app is that as we split the positive and negative values by company(as it is set already), we can see that for every positive complement a company gets, there is negative responses that outweighs it.
+  The other thing that we can see from looking at our shiny app is that as we split the positive and negative values by company (as it is set already), we can see that for every positive complement a company gets, there is negative responses that outweighs it.
 
 
 
