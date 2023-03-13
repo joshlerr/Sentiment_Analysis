@@ -130,8 +130,8 @@ ui<-fluidPage(
   fluidRow(
     column(2,
            selectInput('X', 'choose x',column_names,column_names[4]),
-           selectInput('Y', 'Choose Y',column_names,column_names[2]),
-           selectInput('Splitby', 'Split By', column_names,column_names[5])
+           selectInput('Y', 'Choose Y',column_names,column_names[3]),
+           selectInput('Splitby', 'Split By', column_names,column_names[1])
     ),
     column(4,plotOutput('plot_01')),
     column(6,DT::dataTableOutput("table_01", width = "100%"))
